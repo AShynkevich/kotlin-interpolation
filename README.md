@@ -1,6 +1,7 @@
 Here is a review of Kotlin interpolation issue connected with implementing Koltin interface (with inline value classes) by another JVM language 
 
 Preamble:
+
 There is `EntityId` which is inline value class
 ```kotlin
 @JvmInline
@@ -27,7 +28,7 @@ public class JavaImpl implements KotlinInterface<Entity> {
 }
 ```
 
-IDE doesn't ee any issues and no errors provided.
+IDE doesn't see any issues and no errors provided.
 
 I try to compile project via maven and get the following:
 ```
