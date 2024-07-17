@@ -1,4 +1,4 @@
-package org.example
+package com.example.network
 
 import java.net.InetSocketAddress
 import java.nio.ByteBuffer

@@ -1,4 +1,4 @@
-package org.example
+package com.example.network
 
 import java.net.InetAddress
 import java.net.InetSocketAddress
@@ -6,7 +6,7 @@ import java.nio.ByteBuffer
 import java.nio.channels.DatagramChannel
 
 fun main() {
-    val groupAddress = InetAddress.getByName("230.0.0.1")
+    val groupAddress = InetAddress.getByName("230.0.0.0")
     val channel = DatagramChannel.open()
 
     val networkInterface = getDefaultInterface()

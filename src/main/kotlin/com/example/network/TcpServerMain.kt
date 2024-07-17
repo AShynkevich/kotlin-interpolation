@@ -1,4 +1,4 @@
-package org.example
+package com.example.network
 
 import java.net.InetSocketAddress
 import java.nio.ByteBuffer
@@ -13,12 +13,13 @@ fun main() {
 
     while (true) {
         val clientChannel = serverChannel.accept()
+        val remoteAddress = clientChannel.remoteAddress.toString()
 
         val buffer = ByteBuffer.allocate(256)
         clientChannel.read(buffer)
 
         val receivedMessage = String(buffer.array()).trim { it <= ' ' }
-        println("Message from client: $receivedMessage")
+        println("Message from client[$remoteAddress]: $receivedMessage")
 
         val messageToClient = "Message received"
         val bufferToClient = ByteBuffer.wrap(messageToClient.toByteArray(StandardCharsets.UTF_8))
