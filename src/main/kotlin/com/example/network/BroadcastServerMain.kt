@@ -4,12 +4,14 @@ import java.net.InetSocketAddress
 import java.nio.ByteBuffer
 import java.nio.channels.DatagramChannel
 
+const val PORT = 9000
+
 fun main() {
-    val listenAddress = InetSocketAddress(9000)
+    val listenAddress = InetSocketAddress(PORT)
     val channel = DatagramChannel.open()
     channel.bind(listenAddress)
 
-    println("Listening for broadcast messages on port 9000")
+    println("Listening for broadcast messages on port $PORT")
 
     val buffer = ByteBuffer.allocate(256)
 
